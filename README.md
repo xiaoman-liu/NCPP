@@ -1,1 +1,1 @@
-# intel-novacpu
+NCPP model
