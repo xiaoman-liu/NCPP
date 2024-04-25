@@ -1,0 +1,13 @@
+drop_for_linear: 1
+
+
+data_convert_config:
+  use_ploy: 0
+  use_kpca: 0
+  use_lnx: 0
+  ploy_config:
+    ploy_degree: 1
+  kernelPCA_config:
+    n_components: 2
+    kernel: rbf
+    gamma: 0.1

@@ -1,0 +1,12 @@
+# Project Configuration
+infer_label:
+infer_tag: ""
+# Model to be used (option: LinearModel, XgboostModel, integrated_model, FCN-Model, FCN-Vector, ResNet, AttenResNet)
+#select_model: ResNet
+# hpcg, linpack,memory bandwidth, memory_latency, stream, spec_fp ,spec_int
+# hpcg svm RF input contain nan/hpcg rf no encoder
+model_path: "../../model_history/spr/memory bandwidth/mlc-bd-all-feature_0001_8000"
+infer_upload_sql: 0
+
+save_test_data: 1
+

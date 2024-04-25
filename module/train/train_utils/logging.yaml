@@ -1,0 +1,123 @@
+version: 1
+disable_existing_loggers: True
+
+formatters:
+  brief:
+    format: '%(asctime)s - %(levelname)s - %(message)s'
+  simple:
+    format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    datefmt: '%Y-%m-%d %H:%M:%S'
+  colored:
+    class: train_utils.logger.ColoredFormatter
+    format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    formatter: colored
+    level: INFO
+    stream: ext://sys.stdout
+  file:
+    class: logging.FileHandler
+    formatter: simple
+    level: DEBUG
+    filename: ./output/logs/debug.log
+
+  error:
+    class: logging.handlers.RotatingFileHandler
+    level: ERROR
+    formatter: simple
+    filename: ./output/logs/error.log
+    maxBytes: 10485760
+    backupCount: 20
+    encoding: utf8
+
+loggers:
+  DataLoader:
+    level: DEBUG
+    handlers: [ file, error ]
+  DataPreprocessor:
+    level: DEBUG
+    handlers: [ file, error ]
+  FeatureHandler:
+    level: DEBUG
+    handlers: [ file, error ]
+  LinearModel:
+    level: DEBUG
+    handlers: [ file, error ]
+  XgboostModel:
+    level: DEBUG
+    handlers: [ file, error ]
+  DataPostprocessor:
+    level: DEBUG
+    handlers: [ file, error ]
+  ExecutionTime:
+    level: DEBUG
+    handlers: [ file, error ]
+  UtilsModule:
+    level: DEBUG
+    handlers: [ file, error ]
+  TrainModule:
+    level: DEBUG
+    handlers: [ file, error ]
+  DataVisualization:
+    level: DEBUG
+    handlers: [ file, error ]
+  FCN:
+    level: DEBUG
+    handlers: [ file, error ]
+  FeatureEmbedding:
+    level: DEBUG
+    handlers: [ file, error ]
+  Addition:
+    level: DEBUG
+    handlers: [ file, error ]
+  DatabaseManager:
+    level: DEBUG
+    handlers: [ file, error ]
+  FCN-Vector:
+    level: DEBUG
+    handlers: [ file, error ]
+  ResNet:
+    level: DEBUG
+    handlers: [ file, error ]
+  AttenResNet:
+    level: DEBUG
+    handlers: [ file, error ]
+  MultiAttenResNet:
+    level: DEBUG
+    handlers: [ file, error ]
+  RandomForest:
+    level: DEBUG
+    handlers: [ file, error ]
+  SVMModel:
+    level: DEBUG
+    handlers: [ file, error ]
+  GroupMultiAttenResNet:
+    level: DEBUG
+    handlers: [ file, error ]
+  GroupFeatureEmbedding:
+    level: DEBUG
+    handlers: [ file, error ]
+  LSTMModel:
+    level: DEBUG
+    handlers: [ file, error ]
+  Lasso:
+    level: DEBUG
+    handlers: [ file, error ]
+  ElasticNet:
+    level: DEBUG
+    handlers: [ file, error ]
+  Ridge:
+    level: DEBUG
+    handlers: [ file, error ]
+    
+    
+    
+  
+
+root:
+  level: INFO
+  handlers: [console]
+
+

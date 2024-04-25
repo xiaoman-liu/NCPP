@@ -1,0 +1,144 @@
+feature_group_config:
+    Memory_info:
+        - Measure.DIMM.Total
+        - Measure.DIMM.Num
+        - Measure.DIMM.Freq
+        - Measure.DIMM.PartNo
+        - Measure.DIMM.Total--Measure.DIMM.Num
+        - Measure.DIMM.Total--SVR.CPU.Core(s) per Socket
+        - DIMM.RANK
+        - SVR.Memory.Buffers
+        - CPU_FP_operation_per_sec
+        - Density
+        - Organization
+        - Rank
+        - Speed
+        - CL
+
+
+    Workload_info:
+        - RESULT.WorkloadName
+        - RESULT.WorkloadVersion
+        - RESULT.WorkloadPreset
+        - RESULT.TestName
+        - RESULT.cluster-name
+        - N_SIZE
+        - N_SIZE_RANGE
+        
+    Processor_info:
+        - SVR.CPU.CPU(s)
+        - SVR.CPU.Base Frequency
+        - SVR.CPU.Maximum Frequency
+        - SVR.CPU.All-core Maximum Frequency
+        - SVR.CPU.Thread(s) per Core
+        - SVR.CPU.Core(s) per Socket
+        - SVR.CPU.Socket(s)
+        - SVR.CPU.L1d Cache
+        - SVR.CPU.L1i Cache
+        - SVR.CPU.L2 Cache
+        - SVR.CPU.L3 Cache
+        - QDF.DDR5 FREQ
+        - QDF.MAXIMUM PEG LANE COUNT
+        - QDF.All Core Turbo Freq Rate
+        - QDF.Max Turbo Frequency Rate
+        - QDF.AVX Deterministic P1 Freq Rte
+        - QDF.AVX2 All Core Turbo Freq Rate
+        - QDF.AVX2 Sngl Core Turbo Freq Rate
+        - QDF.AVX3 Deterministic P1 Freq Rte
+        - QDF.AVX3 All Core Turbo Freq Rate
+        - QDF.AVX3 Sngl Core Turbo Freq Rate
+        - QDF.TMUL Deterministic P1 Freq Rte
+        - QDF.TMUL All Core Turbo Freq Rate
+        - QDF.TMUL Sngl Core Turbo Freq Rate
+        - QDF.CLM P1 Max Freq
+        - QDF.CLM P0 Max Freq
+        - QDF.CLM Pn Max Freq
+        - QDF.AVX FMA Execution Unit Count
+        - QDF.Max UPI Port Cnt
+        - QDF.Functional Core
+        - QDF.Thermal Design Power
+        - QDF.Speed
+        - QDF.Cache
+        - QDF.No Memory Channels Supported
+        - QDF.Memory Modules/Channel Suppt
+        - CPU_all_core_max_freq
+        
+    System_info:
+        - SVR.CPU.CPU Model
+        - SVR.CPU.Stepping
+        - SVR.CPU.Family
+        - SVR.Memory.Automatic NUMA Balancing
+        - SVR.System.Microcode
+        - SVR.System.OS
+        - SVR.Power.TDP
+        - SVR.Power.Frequency (MHz)
+    
+    num_feature_group:
+        - Measure.DIMM.Total
+        - Measure.DIMM.Num
+        - Measure.DIMM.Freq
+        - Measure.DIMM.PartNo
+        - Measure.DIMM.Total--Measure.DIMM.Num
+        - Measure.DIMM.Total--SVR.CPU.Core(s) per Socket
+        - DIMM.RANK
+        - SVR.Memory.Buffers
+        - CPU_FP_operation_per_sec
+        - Density
+        - Organization
+        - Rank
+        - Speed
+        - CL
+        - N_SIZE
+        - N_SIZE_RANGE
+        - SVR.CPU.CPU(s)
+        - SVR.CPU.Base Frequency
+        - SVR.CPU.Maximum Frequency
+        - SVR.CPU.All-core Maximum Frequency
+        - SVR.CPU.Thread(s) per Core
+        - SVR.CPU.Core(s) per Socket
+        - SVR.CPU.Socket(s)
+        - SVR.CPU.L1d Cache
+        - SVR.CPU.L1i Cache
+        - SVR.CPU.L2 Cache
+        - SVR.CPU.L3 Cache
+        - QDF.DDR5 FREQ
+        - QDF.MAXIMUM PEG LANE COUNT
+        - QDF.All Core Turbo Freq Rate
+        - QDF.Max Turbo Frequency Rate
+        - QDF.AVX Deterministic P1 Freq Rte
+        - QDF.AVX2 All Core Turbo Freq Rate
+        - QDF.AVX2 Sngl Core Turbo Freq Rate
+        - QDF.AVX3 Deterministic P1 Freq Rte
+        - QDF.AVX3 All Core Turbo Freq Rate
+        - QDF.AVX3 Sngl Core Turbo Freq Rate
+        - QDF.TMUL Deterministic P1 Freq Rte
+        - QDF.TMUL All Core Turbo Freq Rate
+        - QDF.TMUL Sngl Core Turbo Freq Rate
+        - QDF.CLM P1 Max Freq
+        - QDF.CLM P0 Max Freq
+        - QDF.CLM Pn Max Freq
+        - QDF.AVX FMA Execution Unit Count
+        - QDF.Max UPI Port Cnt
+        - QDF.Functional Core
+        - QDF.No Memory Channels Supported
+        - QDF.Memory Modules/Channel Suppt
+        - SVR.Power.TDP
+        - SVR.Power.Frequency (MHz)
+        - CPU_all_core_max_freq
+    
+    char_feature_group:
+        - RESULT.WorkloadName
+        - RESULT.WorkloadVersion
+        - RESULT.WorkloadPreset
+        - RESULT.TestName
+        - RESULT.cluster-name
+        - SVR.CPU.CPU Model
+        - SVR.CPU.Stepping
+        - SVR.CPU.Family
+        - SVR.Memory.Automatic NUMA Balancing
+        - SVR.System.Microcode
+        - SVR.System.OS
+
+
+
+

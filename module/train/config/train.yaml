@@ -1,0 +1,65 @@
+# Project Configuration
+
+# 1.22_utmalte_test_svm
+
+train_label: "label_scale_mlc_bandwidth"
+
+train_tag: "add mem features"
+
+
+# Model to be used (option: LinearModel, Ridge, Lasso, ElasticNet,XgboostModel,
+    #FCN-Model, FCN-Vector, ResNet, AttenResNet, MultiAttenResNet, RandomForest, SVMModel, GroupMultiAttenResNet, LSTMModel)
+select_model: GroupMultiAttenResNet
+
+if_label_scale: 1
+add_mem_features: 1
+
+train_with_all_data: 1
+copy_train_model: 1
+validation_data_upload_to_sql: 0
+
+
+use_train_model: 0
+freeze_train_model: 0
+pre_trained_model_path: "../../model_history/spec_fp/mse_GroupMultiAttenResNet/GroupMultiAttenResNet.hdf5"
+
+# train process param
+K_Fold: 1
+n_split: 5
+
+# Save the fcn (0 or 1)
+is_save_model: 1
+save_train_data: 1
+save_test_data: 1
+
+platform: "SPR"
+# platform: "SPR", "EMR"
+
+  
+# ['RESULT.WorkloadName', 'RESULT.WorkloadPreset', 'RESULT.TestName', 'SVR.System.Microcode', 'SVR.CPU.Base Frequency', 'SVR.CPU.All-core Maximum Frequency',
+    #'SVR.CPU.Core(s) per Socket', 'SVR.CPU.NUMA Node(s)', 'SVR.CPU.L3 Cache', 'SVR.Accelerators', 'SVR.Power.Frequency (MHz)', 'SVR.Memory.MemFree',
+    #'META.metadata.cscope.qdf0', 'META.metadata.cscope.stepping', 'Measure.DIMM.Population', 'Measure.DIMM.Total', 'Measure.DIMM.Num', 'Measure.DIMM.PartNo',
+    #'Measure.DIMM.Freq', 'QDF.Thermal Design Power', 'QDF.All Core Turbo Freq Rate', 'QDF.Max Turbo Frequency Rate', 'QDF.AVX2 All Core Turbo Freq Rate',
+    #'QDF.AVX3 Deterministic P1 Freq Rte', 'QDF.AVX3 All Core Turbo Freq Rate', 'QDF.TMUL Deterministic P1 Freq Rte', 'QDF.TMUL All Core Turbo Freq Rate',
+    #'QDF.CLM P1 Max Freq', 'QDF.CLM P0 Max Freq', 'QDF.AVX FMA Execution Unit Count', 'QDF.Max UPI Port Cnt']
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  

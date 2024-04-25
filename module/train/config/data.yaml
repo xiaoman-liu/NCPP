@@ -1,0 +1,89 @@
+# List of workload names:8
+workload_names:
+#  - All Workloads
+#  - SPECrate2017_int_base
+#  - Memory Latency Checker latency
+  - Memory Latency Checker Bandwidth
+#  - SPECrate2017_fp_base
+#  - Stream
+#  - Linpack
+#  - HPCG
+
+# List of test names: 67
+test_names:
+    - All Testcases
+
+
+
+##  - Local socket local cluster L1 hit latency (ns) avbsefsdhijllmndfdoj
+
+SPECrate2017_fp_base:
+    - 503.bwaves_r
+    - 507.cactuBSSN_r
+    - 508.namd_r
+    - 510.parest_r
+    - 511.povray_r
+    - 519.lbm_r
+    - 521.wrf_r
+    - 526.blender_r
+    - 527.cam4_r
+    - 538.imagick_r
+    - 544.nab_r
+    - 549.fotonik3d_r
+    - 554.roms_r
+    - SPECrate2017_fp_base
+
+SPECrate2017_int_base:
+    - 500.perlbench_r
+    - 502.gcc_r
+    - 505.mcf_r
+    - 520.omnetpp_r
+    - 523.xalancbmk_r
+    - 525.x264_r
+    - 531.deepsjeng_r
+    - 541.leela_r
+    - 548.exchange2_r
+    - 557.xz_r
+    - SPECrate2017_int_base
+
+HPCG:
+    - Score(GFLOPS)
+
+Stream:
+    - Add Bandwidth (MB/s)
+    - Copy Bandwidth (MB/s)
+    - Scale Bandwidth (MB/s)
+    - Triad Bandwidth (MB/s)
+    - Add Bandwidth (NTW) (MB/s)
+    - Copy Bandwidth (NTW) (MB/s)
+    - Scale Bandwidth (NTW) (MB/s)
+    - Triad Bandwidth (NTW) (MB/s)
+
+Memory Latency Checker latency:
+  - Local socket local cluster L1 hit latency (ns)
+  - Local socket local cluster L2 hit latency (ns)
+  - Local socket local cluster L3 hit latency (ns)
+  - Local socket local cluster memory latency Random (ns)
+  - Local socket local cluster memory latency Sequential (ns)
+  - Local socket remote cluster memory latency Random (ns)
+  - Local socket remote cluster memory latency Sequential (ns)
+  - Remote socket memory latency Random (ns)
+  - Remote socket memory latency Sequential (ns)
+
+Memory Latency Checker Bandwidth:
+  - LLC Bandwidth (MB/s)
+  - Peak Bandwidth All Sockets 100R (MB/s)
+  - Peak Bandwidth All Sockets 100W (MB/s)
+  - Peak Bandwidth All Sockets 2R1W NTW (MB/s)
+  - Peak Bandwidth All Sockets 2R1W RFO (MB/s)
+  - Peak Bandwidth Remote (MB/s)
+  - Peak Bandwidth Remote (Reverse) (MB/s)
+  - Peak Bandwidth Socket 0 100R (MB/s)
+  - Peak Bandwidth Socket 1 100R (MB/s)
+
+
+Linpack:
+    - N_SIZE
+    - Score(GFLOPS)
+
+

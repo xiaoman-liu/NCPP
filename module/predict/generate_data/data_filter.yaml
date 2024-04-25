@@ -1,0 +1,68 @@
+merge_iterations_value: 0
+fill_missing_value: 0
+generate_test_data: 0
+no_embedding_model_list:
+    - XgboostModel
+    - LinearModel
+    - FCN-Model
+    - RandomForest
+    - SVMModel
+## Log configuration
+# Log level (1=info, 2=warning, 3=debug)
+log_level: 1
+# Path to the logging configuration file
+logging_config_path: "./utils/logging.yaml"
+
+## Data_path
+# Path to the data file
+infer_dataset_path: ../../data/raw/SPR/All Workloads_test_data1.csv
+
+infer_spr_dataset_path: ../../data/raw/SPR/All Workloads_test_data1.csv
+#infer_spr_dataset_path: ../train/train_power.csv
+#infer_spr_dataset_path: ../train/./test_power.csv
+
+infer_emr_dataset_path: ../../data/raw/EMR/All Workloads__test_data1.csv
+# Path to the QDF data file
+
+infer_spr_qdf_data_path: ../../data/processed//SPR_QDF_INFO_04252023.xlsx
+infer_emr_qdf_data_path: ../../data/processed//EMR_QDF_12112023.xlsx
+
+data_value_filter:
+    SVR.System.Microcode:
+        - "0xab000160"
+        - "0xab0000c0"
+        - "0xab000310"
+        - "0xab000110"
+        - "0xab5843c0"
+        - "0x2b0004a1"
+        - "0x2b0004b1"
+        - "0xab0004b1"
+        - "0xab000480"
+        - "0xab584350"
+        - "0xab5843e0"
+
+    Measure.DIMM.Total:
+        - 256
+        - 2048
+    RESULT.WorkloadName:
+        - "ResNet-50 v1.5"
+    'META.metadata.cscope.qdf0':
+        - "Q231"
+        - "QXSU"
+        - "QXU2"
+        - "QXUA"
+#    'SVR.CPU.Core(s) per Socket':
+#        - 40
+#        - 44
+#        - 48
+#        - 52
+#        - 56
+#        - 60
+    "RESULT.WorkloadPreset":
+        - default(SSE) | Idle latency | SPR XCC
+    Measure.DIMM.Population:
+        - Abnormal/1 Capacity
+        - Abnormal/2+ Capacity
+        - 2DPC/2 Capacity
+    SVR.CPU.CPU Model:
+        - Genuine Intel(R) CPU 0000%@

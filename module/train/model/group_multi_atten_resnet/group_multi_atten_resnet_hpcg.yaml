@@ -1,0 +1,657 @@
+GroupMultiAttenResNet_config:
+    build: 1
+    verbose: 0
+    batch_size: 64
+    nb_epochs: 100
+    ifplot: 0
+    lr_patience: 20
+    lr_factor: 0.05
+
+    lr_cooldown: 5
+    min_lr: 1e-8
+    opm_init_lr: 0.01
+    decay_rate: 0.95
+    decay_steps: 1000
+    n_feature_maps: 64
+    trainable: 1
+    
+    pooled_char_feature: 1
+    multi_heads: 2
+    if_visual_atten: 1
+    use_pre_train_attmodel: 0
+    attention_model_path: 'C:/Users/Shino/OneDrive/xiaoman/projects/new_pp/stunning-guacamole/project report/figures/model/spec_fp/GroupMultiAttenResNet.hdf5'
+    sample_index: 20
+
+
+GroupMultiAttenResNet_workflow_class:
+    load_data: DataLoader
+    process_data: GroupFeatureEmbedding
+    feature_ranking: FeatureProcessor
+
+
+GroupMultiAttenResNet_feature_config:
+    RESULT.cluster-name:
+        used_in_training: 0
+        processing_method:
+            name: Tokenizer
+        data_type: string
+    SVR.CPU.CPU Model:
+        used_in_training: 0
+        processing_method:
+            name: Tokenizer
+        data_type: string
+    'SVR.CPU.Stepping':
+        used_in_training: 1
+        processing_method:
+            name: Tokenizer
+        data_type: string
+    'SVR.CPU.Family':
+        used_in_training: 1
+        processing_method:
+            name: Tokenizer
+        data_type: string
+    'SVR.Memory.Automatic NUMA Balancing':
+        used_in_training: 1
+        processing_method:
+            name: Tokenizer
+        data_type: string
+    'SVR.System.OS':
+        used_in_training: 1
+        processing_method:
+            name: Tokenizer
+        data_type: string
+    'SVR.CPU.CPU(s)':
+        used_in_training: 1
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    SVR.CPU.Base Frequency:
+        used_in_training: 1
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    SVR.CPU.Maximum Frequency:
+        used_in_training: 1
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    SVR.CPU.All-core Maximum Frequency:
+        used_in_training: 1
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    SVR.CPU.Thread(s) per Core:
+        used_in_training: 1
+        processing_method:
+            name: Min_max_scaler
+        data_type: float64
+    SVR.CPU.Core(s) per Socket:
+        used_in_training: 1
+        processing_method:
+            name: Min_max_scaler
+        data_type: float64
+    SVR.CPU.Socket(s):
+        used_in_training: 1
+        processing_method:
+            name: Min_max_scaler
+        data_type: float64
+    SVR.CPU.L1d Cache:
+        used_in_training: 1
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    SVR.CPU.L1i Cache:
+        used_in_training: 1
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    SVR.CPU.L2 Cache:
+        used_in_training: 1
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    SVR.CPU.L3 Cache:
+        used_in_training: 1
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    SVR.Power.TDP:
+        used_in_training: 1
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    SVR.Power.Frequency (MHz):
+        used_in_training: 1
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    SVR.Memory.MemFree:
+        used_in_training: 0
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    Measure.DIMM.Total:
+        used_in_training: 1
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    Measure.DIMM.Num:
+        used_in_training: 1
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    Measure.DIMM.Freq:
+        used_in_training: 1
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    RESULT.WorkloadName:
+        used_in_training: 0
+        processing_method:
+            name: Tokenizer
+        data_type: string
+    RESULT.WorkloadVersion:
+        used_in_training: 0
+        processing_method:
+            name: Tokenizer
+        data_type: string
+    RESULT.WorkloadPreset:
+        used_in_training: 1
+        processing_method:
+            name: Tokenizer
+        data_type: string
+    RESULT.TestName:
+        used_in_training: 0
+        processing_method:
+            name: Tokenizer
+        data_type: string
+    SVR.System.Microcode:
+        used_in_training: 1
+        processing_method:
+            name: Tokenizer
+        data_type: string
+    META.metadata.cscope.qdf0:
+        used_in_training: 0
+        processing_method:
+            name: Tokenizer
+        data_type: string
+    Measure.DIMM.PartNo:
+        used_in_training: 0
+        processing_method:
+            name: Tokenizer
+        data_type: string
+    N_SIZE:
+        used_in_training: 1
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    
+    
+    QDF.Functional Core:
+        used_in_training: 1
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    
+    QDF.Thermal Design Power:
+        used_in_training: 0
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    
+    QDF.Speed:
+        used_in_training: 0
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    
+    QDF.DDR5 FREQ:
+        used_in_training: 1
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    
+    QDF.MAXIMUM PEG LANE COUNT:
+        used_in_training: 1
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    
+    QDF.Cache:
+        used_in_training: 1
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    
+    QDF.All Core Turbo Freq Rate:
+        used_in_training: 0
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    
+    QDF.Max Turbo Frequency Rate:
+        used_in_training: 0
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    
+    QDF.AVX Deterministic P1 Freq Rte:
+        used_in_training: 1
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    
+    QDF.AVX2 All Core Turbo Freq Rate:
+        used_in_training: 1
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    
+    QDF.AVX2 Sngl Core Turbo Freq Rate:
+        used_in_training: 1
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    
+    QDF.AVX3 Deterministic P1 Freq Rte:
+        used_in_training: 1
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    
+    QDF.AVX3 All Core Turbo Freq Rate:
+        used_in_training: 1
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    
+    QDF.AVX3 Sngl Core Turbo Freq Rate:
+        used_in_training: 1
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    
+    QDF.TMUL Deterministic P1 Freq Rte:
+        used_in_training: 1
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    
+    QDF.TMUL All Core Turbo Freq Rate:
+        used_in_training: 1
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    
+    QDF.TMUL Sngl Core Turbo Freq Rate:
+        used_in_training: 1
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    
+    QDF.CLM P1 Max Freq:
+        used_in_training: 1
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    
+    QDF.CLM P0 Max Freq:
+        used_in_training: 1
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    
+    QDF.CLM Pn Max Freq:
+        used_in_training: 1
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    
+    QDF.AVX FMA Execution Unit Count:
+        used_in_training: 0
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    
+    QDF.Max UPI Port Cnt:
+        used_in_training: 1
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+
+    QDF.No Memory Channels Supported:
+        used_in_training: 1
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+
+    QDF.Memory Modules/Channel Suppt:
+        used_in_training: 1
+        processing_method:
+            name: Normalization_scaler
+        data_type: float64
+    
+#    QDF.Core Count ISS3:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.Thermal Design Power ISS3:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#    QDF.P1 SSE ISS 3:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.All Core Turbo Frequency ISS3:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.Max Turbo Frequency Rate ISS 3:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.P1 AVX2 ISS 3:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.AVX2 All Core Turbo Freq ISS 3:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.AVX2 Sngl Core Turbo ISS 3:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.P1 AVX3 ISS 3:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.AVX3 All Core Turbo Freq ISS 3:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.AVX3 Sngl Core Turbo ISS 3:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#    QDF.P1 TMUL ISS 3:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.TMUL All Core Turbo Freq ISS 3:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.TMUL Sngl Core Turbo ISS 3:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.CLM P1 ISS 3:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.CLM P0 ISS 3:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.CLM RAPL Scale Factor ISS 3:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.RAPL Anchor ISS 3:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.DDR Frequency ISS 3:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.Core Count ISS 4:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.Thermal Design Power ISS 4:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.P1 SSE ISS 4:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.All Core Turbo Frequency ISS 4:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.Max Turbo Frequency Rate ISS 4:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.P1 AVX2 ISS 4:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.AVX2 All Core Turbo ISS 4:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.AVX2 Sngl Core Turbo ISS4:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#    QDF.P1 AVX3 ISS 4:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.AVX3 All Core Turbo Freq ISS 4:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.AVX3 Sngl Core Turbo ISS 4:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.P1 TMUL ISS 4:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.TMUL All Core Turbo Freq ISS 4:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.TMUL Sngl Core Turbo ISS 4:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.CLM P1 ISS 4:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.CLM P0 ISS 4:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.CLM RAPL Scale Factor ISS 4:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.RAPL Anchor ISS 4:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.DDR Frequency ISS 4:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.ISS3 DTS Cal Guardband:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.ISS3 DTS Max Temp:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.ISS3 DTS Tcase Max:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.ISS3 T Local Ambient:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.ISS3 Tcontrol:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.ISS3 TDP Cap:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.ISS3 Tj Max:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.ISS3 Tj Max Offset:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.ISS4 DTS Cal Guardband:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.ISS4 DTS Max Temp:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.ISS4 DTS Tcase Max:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.ISS4 T Local Ambient:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.ISS4 Tcontrol:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.ISS4 TDP Cap:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.ISS4 Tj Max:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+#
+#    QDF.ISS4 Tj Max Offset:
+#        used_in_training: 1
+#        processing_method:
+#            name: Normalization_scaler
+#        data_type: float64
+
+
+
+
