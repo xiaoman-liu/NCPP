@@ -5,4 +5,4 @@
 # @File    : __init__.py
 # @Software: PyCharm
 
-from src.inference.model.base_class.base_model import BaseModel
+from module.inference.model.base_class.base_model import BaseModel

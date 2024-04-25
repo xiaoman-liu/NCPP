@@ -7,10 +7,10 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='performance-prediction',
+    name='NCPP',
     version='1.0.0',
-    description='performance prediction',
-    author='Xiaoman',
+    description='Nova CPU performance predictor',
+    author='Xiaoman.liu',
     author_email='xiaoman.liu@intel.com',
     entry_points={
     'console_scripts': ['performance-prediction=module:function'],

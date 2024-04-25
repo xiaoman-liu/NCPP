@@ -5,4 +5,4 @@
 # @File    : __init__.py
 # @Software: PyCharm
 
-from src.train.generate_data.data_filter import DataLoader
+from module.train.generate_data.data_filter import DataLoader

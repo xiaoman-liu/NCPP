@@ -9,7 +9,7 @@ import pandas as pd
 import logging
 import os
 import numpy as np
-from src.inference.utils import calculate_running_time
+from module.inference.utils import calculate_running_time
 import yaml
 import matplotlib.pyplot as plt
 from tabulate import tabulate

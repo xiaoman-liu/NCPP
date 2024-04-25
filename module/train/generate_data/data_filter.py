@@ -11,8 +11,8 @@ from sklearn.model_selection import GroupShuffleSplit
 
 from sklearn.model_selection import GroupKFold
 
-from src.train.train_utils import calculate_running_time, read_file, generate_abs_path, read_yaml_file, read_class_config
-from src.train.train_utils import multi_label_transfer, linpack_transfer, MLC_multi_label_transfer, headmap_feature
+from module.train.train_utils import calculate_running_time, read_file, generate_abs_path, read_yaml_file, read_class_config
+from module.train.train_utils import multi_label_transfer, linpack_transfer, MLC_multi_label_transfer, headmap_feature
 import re
 import logging
 from pathlib import Path

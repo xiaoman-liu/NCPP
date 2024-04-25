@@ -13,15 +13,15 @@ from pathlib import Path
 import logging
 import joblib
 
-from src.inference.utils import calculate_running_time, mkdir, save_data_encoder, read_config, set_logger
-from src.inference.generate_data import DataLoader
-from src.inference.data_preprocess import FeatureEncoder, GroupFeatureEmbedding
-from src.inference.data_postprocess import DataPostprocessor
+from module.inference.utils import calculate_running_time, mkdir, save_data_encoder, read_config, set_logger
+from module.inference.generate_data import DataLoader
+from module.inference.data_preprocess import FeatureEncoder, GroupFeatureEmbedding
+from module.inference.data_postprocess import DataPostprocessor
 from sklearn.preprocessing import MinMaxScaler, StandardScaler
-# from src.inference.utils.model_utils import MinMaxScaler, NorScaler, OneHotEncoder, TextTokenizer
-from src.inference.utils.additional import merge_K_fold_results
-from src.inference.utils import param_search, DatabaseManager
-from src.inference.model import LinearModel, XgboostModel, FCN, FCN_Vec, ResNet, AttenResNet, MultiAttenResNet, RandomForest, SVMModel, LSTMModel, Ridge, GroupMultiAttenResNet
+# from module.inference.utils.model_utils import MinMaxScaler, NorScaler, OneHotEncoder, TextTokenizer
+from module.inference.utils.additional import merge_K_fold_results
+from module.inference.utils import param_search, DatabaseManager
+from module.inference.model import LinearModel, XgboostModel, FCN, FCN_Vec, ResNet, AttenResNet, MultiAttenResNet, RandomForest, SVMModel, LSTMModel, Ridge, GroupMultiAttenResNet
 
 
 

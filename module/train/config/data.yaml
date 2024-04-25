@@ -13,10 +13,6 @@ workload_names:
 test_names:
     - All Testcases
 
-
-
-##  - Local socket local cluster L1 hit latency (ns) avbsefsdhijllmndfdoj
-
 SPECrate2017_fp_base:
     - 503.bwaves_r
     - 507.cactuBSSN_r

@@ -1,19 +1,5 @@
 model_dict:
-    "LinearModel": model.lr.linear_regression.LinearModel
-    "XgboostModel": model.xgb.xgboost.XgboostModel
-    "FCN-Model": model.fcn.fcn.FCN
-    "FCN-Vector": model.fcn_vec.fcn_vector.FCN_Vec
-    "ResNet": model.resnet.resnet.ResNet
-    "AttenResNet": model.atten_resnet.atten_resnet.AttenResNet
-    "MultiAttenResNet": model.res_trans_net.multi_atten_resnet.MultiAttenResNet
-    "RandomForest": model.random_forest.rf.RandomForest
-    "SVMModel": model.svm.svm.SVMModel
     GroupMultiAttenResNet: model.group_multi_atten_resnet.group_attention_resnet.GroupMultiAttenResNet
-    LSTMModel: model.lstm.lstm.LSTMModel
-    Lasso: model.lasso.lasso.Lasso
-    Ridge: model.ridge.ridge.Ridge
-    ElasticNet: model.elastic_net.elastic_net.ElasticNet
-    
     
 
 replace_dict:
@@ -24,82 +10,9 @@ replace_dict:
     
 
 spr_model_history_root_path: ../../model_history/spr
-emr_model_history_root_path: ../../model_history/emr
 
 
 model_config_for_workload_dict:
-    LinearModel:
-        SPECrate2017_int_base: "lr_spec_int.yaml"
-        Memory Latency Checker latency: "lr_memory_latency.yaml"
-        Memory Latency Checker Bandwidth: "lr_mlc_bandwidth.yaml"
-        SPECrate2017_fp_base: "lr_spec_fp.yaml"
-        Stream: "lr_stream.yaml"
-        Linpack: "lr_linpack.yaml"
-        HPCG: "lr_hpcg.yaml"
-    XgboostModel:
-        SPECrate2017_int_base: "xgb_spec_int.yaml"
-        Memory Latency Checker latency: "xgb_memory_latency.yaml"
-        Memory Latency Checker Bandwidth: "xgb_mlc_bandwidth.yaml"
-        SPECrate2017_fp_base: "xgb_spec_fp.yaml"
-        Stream: "xgb_stream.yaml"
-        Linpack: "xgb_linpack.yaml"
-        HPCG: "xgb_hpcg.yaml"
-    FCN-Model:
-        SPECrate2017_int_base: "fcn_spec_int.yaml"
-        Memory Latency Checker latency: "fcn_memory_latency.yaml"
-        Memory Latency Checker Bandwidth: "fcn_mlc_bandwidth.yaml"
-        SPECrate2017_fp_base: "fcn_spec_fp.yaml"
-        Stream: "fcn_stream.yaml"
-        Linpack: "fcn_linpack.yaml"
-        HPCG: "fcn_hpcg.yaml"
-    FCN-Vector:
-        SPECrate2017_int_base: "fcn_vec_spec_int.yaml"
-        Memory Latency Checker latency: "fcn_vec_memory_latency.yaml"
-        Memory Latency Checker Bandwidth: "fcn_vec_mlc_bandwidth.yaml"
-        SPECrate2017_fp_base: "fcn_vec_spec_fp.yaml"
-        Stream: "fcn_vec_stream.yaml"
-        Linpack: "fcn_vec_linpack.yaml"
-        HPCG: "fcn_vec_hpcg.yaml"
-    ResNet:
-        SPECrate2017_int_base: "resnet_spec_int.yaml"
-        Memory Latency Checker latency: "resnet_memory_latency.yaml"
-        Memory Latency Checker Bandwidth: "resnet_mlc_bandwidth.yaml"
-        SPECrate2017_fp_base: "resnet_spec_fp.yaml"
-        Stream: "resnet_stream.yaml"
-        Linpack: "resnet_linpack.yaml"
-        HPCG: "resnet_hpcg.yaml"
-    AttenResNet:
-        SPECrate2017_int_base: "atten_resnet_spec_int.yaml"
-        Memory Latency Checker latency: "atten_resnet_memory_latency.yaml"
-        Memory Latency Checker Bandwidth: "atten_resnet_mlc_bandwidth.yaml"
-        SPECrate2017_fp_base: "atten_resnet_spec_fp.yaml"
-        Stream: "atten_resnet_stream.yaml"
-        Linpack: "atten_resnet_linpack.yaml"
-        HPCG: "atten_resnet_hpcg.yaml"
-    MultiAttenResNet:
-        SPECrate2017_int_base: "multi_atten_resnet_spec_int.yaml"
-        Memory Latency Checker latency: "multi_atten_resnet_memory_latency.yaml"
-        Memory Latency Checker Bandwidth: "multi_atten_resnet_mlc_bandwidth.yaml"
-        SPECrate2017_fp_base: "multi_atten_resnet_spec_fp.yaml"
-        Stream: "multi_atten_resnet_stream.yaml"
-        Linpack: "multi_atten_resnet_linpack.yaml"
-        HPCG: "multi_atten_resnet_hpcg.yaml"
-    RandomForest:
-        SPECrate2017_int_base: "rf_spec_int.yaml"
-        Memory Latency Checker latency: "rf_memory_latency.yaml"
-        Memory Latency Checker Bandwidth: "rf_mlc_bandwidth.yaml"
-        SPECrate2017_fp_base: "rf_spec_fp.yaml"
-        Stream: "rf_stream.yaml"
-        Linpack: "rf_linpack.yaml"
-        HPCG: "rf_hpcg.yaml"
-    SVMModel:
-        SPECrate2017_int_base: "svm_spec_int.yaml"
-        Memory Latency Checker latency: "svm_memory_latency.yaml"
-        Memory Latency Checker Bandwidth: "svm_mlc_bandwidth.yaml"
-        SPECrate2017_fp_base: "svm_spec_fp.yaml"
-        Stream: "svm_stream.yaml"
-        Linpack: "svm_linpack.yaml"
-        HPCG: "svm_hpcg.yaml"
     GroupMultiAttenResNet:
         SPECrate2017_int_base: "group_multi_atten_resnet_spec_int.yaml"
         Memory Latency Checker latency: "group_multi_atten_resnet_memory_latency.yaml"
@@ -108,40 +21,6 @@ model_config_for_workload_dict:
         Stream: "group_multi_atten_resnet_stream.yaml"
         Linpack: "group_multi_atten_resnet_linpack.yaml"
         HPCG: "group_multi_atten_resnet_hpcg.yaml"
-    LSTMModel:
-        SPECrate2017_int_base: "lstm_spec_int.yaml"
-        Memory Latency Checker latency: "lstm_memory_latency.yaml"
-        Memory Latency Checker Bandwidth: "lstm_mlc_bandwidth.yaml"
-        SPECrate2017_fp_base: "lstm_spec_fp.yaml"
-        Stream: "lstm_stream.yaml"
-        Linpack: "lstm_linpack.yaml"
-        HPCG: "lstm_hpcg.yaml"
-    Lasso:
-        SPECrate2017_int_base: "lasso_spec_int.yaml"
-        Memory Latency Checker latency: "lasso_memory_latency.yaml"
-        Memory Latency Checker Bandwidth: "lasso_mlc_bandwidth.yaml"
-        SPECrate2017_fp_base: "lasso_spec_fp.yaml"
-        Stream: "lasso_stream.yaml"
-        Linpack: "lasso_linpack.yaml"
-        HPCG: "lasso_hpcg.yaml"
-    Ridge:
-        SPECrate2017_int_base: "ridge_spec_int.yaml"
-        Memory Latency Checker latency: "ridge_memory_latency.yaml"
-        Memory Latency Checker Bandwidth: "ridge_mlc_bandwidth.yaml"
-        SPECrate2017_fp_base: "ridge_spec_fp.yaml"
-        Stream: "ridge_stream.yaml"
-        Linpack: "ridge_linpack.yaml"
-        HPCG: "ridge_hpcg.yaml"
-    ElasticNet:
-        SPECrate2017_int_base: "elastic_net_spec_int.yaml"
-        Memory Latency Checker latency: "elastic_net_memory_latency.yaml"
-        Memory Latency Checker Bandwidth: "elastic_net_mlc_bandwidth.yaml"
-        SPECrate2017_fp_base: "elastic_net_spec_fp.yaml"
-        Stream: "elastic_net_stream.yaml"
-        Linpack: "elastic_net_linpack.yaml"
-        HPCG: "elastic_net_hpcg.yaml"
-    
-
 
 label_scale:
     SPECrate2017_int_base: 1
@@ -151,15 +30,6 @@ label_scale:
     Stream: 1000
     Linpack: 10
     HPCG: 1
-
-feature_ranking_tb:
-    SPECrate2017_int_base: "feat_impor_spec_int"
-    Memory Latency Checker latency: "fea_imp_mlc_latency"
-    Memory Latency Checker Bandwidth: "fea_imp_mem_bd"
-    SPECrate2017_fp_base: "fea_impt_spec_fp"
-    Stream: "fea_imp_stream"
-    Linpack: "fea_imp_linpack"
-    HPCG: "fea_imp_linpack"
     
 model_history_path_mapping:
     SPECrate2017_int_base: "spec_int"

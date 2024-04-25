@@ -19,10 +19,9 @@ from keras.layers import Embedding
 import matplotlib.pyplot as plt
 import numpy as np
 from keras.utils import custom_object_scope
-from src.train.model.base_class import BaseModel
-from src.train.train_utils import  (calculate_running_time, LogPrintCallback, CustomDataGenerator, Train_predict_compare, Self_Attention,
+from module.train.model.base_class import BaseModel
+from module.train.train_utils import  (calculate_running_time, LogPrintCallback, CustomDataGenerator, Train_predict_compare, Self_Attention,
                                     MultiHeadAtten, genereate_feature_list, mkdir)
-from src.train.visualization.visualization import visualized_attention, plot_epochs_metric
 import os
 import logging
 import pandas as pd

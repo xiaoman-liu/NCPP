@@ -5,4 +5,4 @@
 # @File    : __init__.py
 # @Software: PyCharm
 
-from src.inference.data_postprocess.data_postprocess import DataPostprocessor
+from module.inference.data_postprocess.data_postprocess import DataPostprocessor

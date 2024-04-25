@@ -12,16 +12,13 @@ import pandas as pd
 from pathlib import Path
 import logging
 
-from src.train.train_utils import calculate_running_time, mkdir, save_data_encoder, read_config, set_logger
-from src.train.generate_data import DataLoader
-from src.train.data_preprocess import DataPreprocessor, FeatureEmbedding, DataPreprocessorXGB, GroupFeatureEmbedding
-from src.train.data_postprocess import DataPostprocessor
+from module.train.train_utils import calculate_running_time, mkdir, save_data_encoder, read_config, set_logger
+from module.train.generate_data import DataLoader
+from module.train.data_preprocess import DataPreprocessor, FeatureEmbedding, DataPreprocessorXGB, GroupFeatureEmbedding
+from module.train.data_postprocess import DataPostprocessor
 # from sklearn.preprocessing import MinMaxScaler, StandardScaler
-from src.train.model import LinearModel, XgboostModel, FCN, FCN_Vec,ResNet, AttenResNet, MultiAttenResNet, RandomForest, SVMModel, GroupMultiAttenResNet, LSTMModel, Ridge, Lasso,  ElasticNet
-from src.train.train_utils.additional import merge_K_fold_results
-from src.train.train_utils import param_search, DatabaseManager
-
-
+from module.train.model import GroupMultiAttenResNet
+from module.train.train_utils.additional import merge_K_fold_results
 
 class Trainer:
     def __init__(self, output_path="../../train_results", config_path="./config", module_path="./"):

@@ -8,7 +8,7 @@ import sys
 from collections import OrderedDict
 import yaml
 
-from src.train.train_utils import calculate_running_time
+from module.train.train_utils import calculate_running_time
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.decomposition import KernelPCA
 import pandas as pd
@@ -17,7 +17,7 @@ import os
 import logging
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
-from src.train.train_utils import calculate_running_time, read_class_config, mkdir, MinMaxScaler, NorScaler, OneHotEncoder, TextTokenizer
+from module.train.train_utils import calculate_running_time, read_class_config, mkdir, MinMaxScaler, NorScaler, OneHotEncoder, TextTokenizer
 from sklearn.compose import ColumnTransformer
 from pathlib import Path
 import joblib

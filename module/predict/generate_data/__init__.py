@@ -5,4 +5,4 @@
 # @File    : __init__.py
 # @Software: PyCharm
 
-from src.inference.generate_data.infer_data_filter import DataLoader
+from module.inference.generate_data.infer_data_filter import DataLoader

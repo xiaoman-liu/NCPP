@@ -1,0 +1,6 @@
+data_visualization: 0
+## Visualization
+# Plot the result (0 or 1)
+is_plot: 0
+# Save the picture (0 or 1)
+is_save_picture: 1

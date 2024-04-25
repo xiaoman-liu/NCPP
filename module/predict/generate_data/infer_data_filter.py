@@ -11,8 +11,8 @@ from sklearn.model_selection import GroupShuffleSplit
 
 from sklearn.model_selection import GroupKFold
 
-from src.inference.utils import calculate_running_time, read_file, generate_abs_path, read_yaml_file, read_class_config
-from src.inference.utils import multi_label_transfer, linpack_transfer, MLC_multi_label_transfer
+from module.inference.utils import calculate_running_time, read_file, generate_abs_path, read_yaml_file, read_class_config
+from module.inference.utils import multi_label_transfer, linpack_transfer, MLC_multi_label_transfer
 import re
 import logging
 from pathlib import Path

@@ -8,7 +8,7 @@
 import logging
 import pandas as pd
 import numpy as np
-from src.train import model
+from module.train import model
 import shutil
 
 #from abc import ABCMeta, abstractmethod

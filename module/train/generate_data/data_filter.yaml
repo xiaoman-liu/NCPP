@@ -11,51 +11,14 @@ log_level: 1
 logging_config_path: "./train_utils/logging.yaml"
 
 ## Data_path
-# Path to the data file
-spr_dataset_path: ../../data/raw/SPR/All Workloads_train_data1.csv
-#spr_dataset_path: ./test_power.csv
-#spr_dataset_path: ../../data/raw/SPR/SPR-220927-231027_all.csv
-#dataset_path: ../../data/raw/EMR/EMR-230427-231218_all.csv
-emr_dataset_path: ../../data/raw/EMR/All Workloads__train_data1.csv
+
+spr_dataset_path: ../../data/raw/SPR/train_data.csv
+
 # Path to the QDF data file
 # Add QDF details to the result (0 or 1)
-#qdf_data_path: ../../data/processed/SPR_E_Stepping_Reduced.xlsx
-spr_qdf_data_path: ../../data/processed//SPR_QDF_INFO_04252023.xlsx
-emr_qdf_data_path: ../../data/processed//EMR_QDF_12112023.xlsx
-
-
+spr_qdf_data_path: ../../data/processed//SPR_QDF_INFO.xlsx
 
 data_value_filter:
-    SVR.System.Microcode:
-        - "0xab000160"
-        - "0xab0000c0"
-        - "0xab000310"
-        - "0xab000110"
-        - "0xab5843c0"
-        - "0x2b0004a1"
-        - "0x2b0004b1"
-        - "0xab0004b1"
-        - "0xab000480"
-        - "0xab584350"
-        - "0xab5843e0"
-
-    Measure.DIMM.Total:
-        - 256
-        - 2048
-    RESULT.WorkloadName:
-        - "ResNet-50 v1.5"
-    'META.metadata.cscope.qdf0':
-        - "Q231"
-        - "QXSU"
-        - "QXU2"
-        - "QXUA"
-#    'SVR.CPU.Core(s) per Socket':
-#        - 40
-#        - 44
-#        - 48
-#        - 52
-#        - 56
-#        - 60
     "RESULT.WorkloadPreset":
         - default(SSE) | Idle latency | SPR XCC
     Measure.DIMM.Population:
@@ -83,21 +46,6 @@ label_name_list:
     - 'RESULT.Value'
 
 qdf_features:
-#    - QDF.AVX FMA Execution Unit Count
-#    - QDF.AVX2 All Core Turbo Freq Rate
-#    - QDF.AVX3 All Core Turbo Freq Rate
-#    - QDF.AVX3 Deterministic P1 Freq Rte
-#    - QDF.All Core Turbo Freq Rate
-#    - QDF.CLM P0 Max Freq
-#    - QDF.CLM P1 Max Freq
-#    - QDF.Max Turbo Frequency Rate
-#    - QDF.Max UPI Port Cnt
-#    - QDF.TMUL All Core Turbo Freq Rate
-#    - QDF.TMUL Deterministic P1 Freq Rte
-#    - QDF.Thermal Design Power
-#    - QDF.QDF/SSPEC
-#    - QDF.Speed
-#    - QDF.Cache
     - QDF.QDF/SSPEC
     - QDF.Functional Core
     - QDF.Thermal Design Power
@@ -123,62 +71,6 @@ qdf_features:
     - QDF.Max UPI Port Cnt
     - QDF.No Memory Channels Supported
     - QDF.Memory Modules/Channel Supptd
-#    - QDF.Core Count ISS 3
-#    - QDF.Thermal Design Power ISS 3
-#    - QDF.P1 SSE ISS 3
-#    - QDF.All Core Turbo Frequency ISS3
-#    - QDF.Max Turbo Frequency Rate ISS 3
-#    - QDF.P1 AVX2 ISS 3
-#    - QDF.AVX2 All Core Turbo Freq ISS 3
-#    - QDF.AVX2 Sngl Core Turbo ISS 3
-#    - QDF.P1 AVX3 ISS 3
-#    - QDF.AVX3 All Core Turbo Freq ISS 3
-#    - QDF.AVX3 Sngl Core Turbo ISS 3
-#    - QDF.P1 TMUL ISS 3
-#    - QDF.TMUL All Core Turbo Freq ISS 3
-#    - QDF.TMUL Sngl Core Turbo ISS 3
-#    - QDF.CLM P1 ISS 3
-#    - QDF.CLM P0 ISS 3
-#    - QDF.CLM RAPL Scale Factor ISS 3
-#    - QDF.RAPL Anchor ISS 3
-#    - QDF.DDR Frequency ISS 3
-#    - QDF.Core Count ISS 4
-#    - QDF.Thermal Design Power ISS 4
-#    - QDF.P1 SSE ISS 4
-#    - QDF.All Core Turbo Frequency ISS 4
-#    - QDF.Max Turbo Frequency Rate ISS 4
-#    - QDF.P1 AVX2 ISS 4
-#    - QDF.AVX2 All Core Turbo ISS 4
-#    - QDF.AVX2 Sngl Core Turbo ISS4
-#    - QDF.P1 AVX3 ISS 4
-#    - QDF.AVX3 All Core Turbo Freq ISS 4
-#    - QDF.AVX3 Sngl Core Turbo ISS 4
-#    - QDF.P1 TMUL ISS 4
-#    - QDF.TMUL All Core Turbo Freq ISS 4
-#    - QDF.TMUL Sngl Core Turbo ISS 4
-#    - QDF.CLM P1 ISS 4
-#    - QDF.CLM P0 ISS 4
-#    - QDF.CLM RAPL Scale Factor ISS 4
-#    - QDF.RAPL Anchor ISS 4
-#    - QDF.DDR Frequency ISS 4
-#    - QDF.ISS3 DTS Cal Guardband
-#    - QDF.ISS3 DTS Max Temp
-#    - QDF.ISS3 DTS Tcase Max
-#    - QDF.ISS3 T Local Ambient
-#    - QDF.ISS3 Tcontrol
-#    - QDF.ISS3 TDP Cap
-#    - QDF.ISS3 Tj Max
-#    - QDF.ISS3 Tj Max Offset
-#    - QDF.ISS4 DTS Cal Guardband
-#    - QDF.ISS4 DTS Max Temp
-#    - QDF.ISS4 DTS Tcase Max
-#    - QDF.ISS4 T Local Ambient
-#    - QDF.ISS4 Tcontrol
-#    - QDF.ISS4 TDP Cap
-#    - QDF.ISS4 Tj Max
-#    - QDF.ISS4 Tj Max Offset
-
-
 
 col_filter_nan_row:
     - 'RESULT.Value'

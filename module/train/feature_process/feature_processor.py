@@ -8,8 +8,8 @@
 import pandas as pd
 import logging
 
-from src.train.train_utils import calculate_running_time, dict_to_csv, generate_evaluate_metric
-from src.train.model import XgboostModel
+from module.train.train_utils import calculate_running_time, dict_to_csv, generate_evaluate_metric
+from module.train.model import XgboostModel
 from sklearn.model_selection import GroupShuffleSplit, GroupKFold, StratifiedKFold
 from sklearn.ensemble import RandomForestRegressor
 import xgboost as xgb

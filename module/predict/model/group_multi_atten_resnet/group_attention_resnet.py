@@ -18,8 +18,8 @@ from keras.layers import Embedding
 import matplotlib.pyplot as plt
 import numpy as np
 from keras.utils import custom_object_scope
-from src.inference.model.base_class import BaseModel
-from src.inference.utils import  calculate_running_time, LogPrintCallback, CustomDataGenerator, Train_predict_compare, Self_Attention, MultiHeadAtten
+from module.inference.model.base_class import BaseModel
+from module.inference.utils import  calculate_running_time, LogPrintCallback, CustomDataGenerator, Train_predict_compare, Self_Attention, MultiHeadAtten
 import os
 import logging
 import pandas as pd

@@ -5,17 +5,17 @@
 # @File    : __init__.py
 # @Software: PyCharm
 
-from src.inference.model import lr, fcn, fcn_vec, xgb,base_class
-from src.inference.model.lr import LinearModel
-from src.inference.model.xgb import  XgboostModel
-from src.inference.model.fcn import FCN
-from src.inference.model.fcn_vec import FCN_Vec
-from src.inference.model.base_class import BaseModel
-from src.inference.model.resnet import ResNet
-from src.inference.model.atten_resnet import AttenResNet
-from src.inference.model.res_trans_net import MultiAttenResNet
-from src.inference.model.rf import RandomForest
-from src.inference.model.svm import SVMModel
-from src.inference.model.lstm import LSTMModel
-from src.inference.model.ridge.ridge import Ridge
-from src.inference.model.group_multi_atten_resnet import GroupMultiAttenResNet
+from module.inference.model import lr, fcn, fcn_vec, xgb,base_class
+from module.inference.model.lr import LinearModel
+from module.inference.model.xgb import  XgboostModel
+from module.inference.model.fcn import FCN
+from module.inference.model.fcn_vec import FCN_Vec
+from module.inference.model.base_class import BaseModel
+from module.inference.model.resnet import ResNet
+from module.inference.model.atten_resnet import AttenResNet
+from module.inference.model.res_trans_net import MultiAttenResNet
+from module.inference.model.rf import RandomForest
+from module.inference.model.svm import SVMModel
+from module.inference.model.lstm import LSTMModel
+from module.inference.model.ridge.ridge import Ridge
+from module.inference.model.group_multi_atten_resnet import GroupMultiAttenResNet
