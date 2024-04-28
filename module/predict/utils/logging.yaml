@@ -39,15 +39,6 @@ loggers:
   DataPreprocessor:
     level: DEBUG
     handlers: [ file, error ]
-  FeatureHandler:
-    level: DEBUG
-    handlers: [ file, error ]
-  LinearModel:
-    level: DEBUG
-    handlers: [ file, error ]
-  XgboostModel:
-    level: DEBUG
-    handlers: [ file, error ]
   DataPostprocessor:
     level: DEBUG
     handlers: [ file, error ]
@@ -72,30 +63,6 @@ loggers:
   Addition:
     level: DEBUG
     handlers: [ file, error ]
-  DatabaseManager:
-    level: DEBUG
-    handlers: [ file, error ]
-  FCN-Vector:
-    level: DEBUG
-    handlers: [ file, error ]
-  AttenResNet:
-    level: DEBUG
-    handlers: [ file, error ]
-  MultiAttenResNet:
-    level: DEBUG
-    handlers: [ file, error ]
-  RandomForest:
-    level: DEBUG
-    handlers: [ file, error ]
-  SVMModel:
-    level: DEBUG
-    handlers: [ file, error ]
-  LSTMModel:
-    level: DEBUG
-    handlers: [ file, error ]
-  Ridge:
-    level: DEBUG
-    handlers: [ file, error ]
   GroupFeatureEmbedding:
     level: DEBUG
     handlers: [ file, error ]
@@ -103,7 +70,6 @@ loggers:
     level: DEBUG
     handlers: [ file, error ]
     
-  
 
 root:
   level: INFO

@@ -117,18 +117,6 @@ def read_yaml_files(dir_path):
             except Exception as e:
                 logger.info(f"Error reading file {filename}: {e}")
 
-    # Get all files in the current directory
-    # files = os.listdir(dir_path)
-    #
-    # # Filter YAML files
-    # yaml_files = [file for file in files if file.endswith('.yaml') or file.endswith('.yml')]
-    #
-    # # Read each YAML file
-    # for yaml_file in yaml_files:
-    #     file_path = os.path.join(dir_path, yaml_file)
-    #     with open(file_path, 'r') as f:
-    #         data = yaml.safe_load(f)
-    #         result.update(data)
     return result
 
 def read_yaml_file(path):
@@ -227,24 +215,6 @@ def generate_evaluate_metric(predict_label, true_label):
     compare = pd.concat([true_label, predict_label, ape.to_frame(name='APE')], axis = 1)
     return metric, compare
 
-# def merge_K_fold_results(configs):
-#     path = configs["K_fold_save_path"]
-#     variation_output = 'summary_variation.csv'
-#     test_data_output = 'summary_test_data.csv'
-#     variation_data = pd.DataFrame()
-#     test_results = pd.DataFrame()
-#
-#     for i in range(configs["n_split"]):
-#         folder_path = os.path.join(path, eval(configs["split_folder"])).replace("\\","/")
-#         variation_path = os.path.join(folder_path, 'variation.csv')
-#         test_data_path = os.path.join(folder_path, 'test_data.csv')
-#         variation_split = pd.read_csv(variation_path)
-#         test_results_split = pd.read_csv(test_data_path)
-#         variation_data = pd.concat([variation_data, variation_split])
-#         test_results = pd.concat([test_results, test_results_split])
-#     variation_data.to_csv(path + '\\' + variation_output, index=False)
-#     test_results.to_csv(path + '\\' + test_data_output, index=False)
-#     logger.info(f"merge the {configs['n_split']} Fold results into path {path}")
 
 
 

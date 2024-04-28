@@ -14,10 +14,9 @@ import logging
 
 from module.train.train_utils import calculate_running_time, mkdir, save_data_encoder, read_config, set_logger
 from module.train.generate_data import DataLoader
-from module.train.data_preprocess import DataPreprocessor, FeatureEmbedding, DataPreprocessorXGB, GroupFeatureEmbedding
-from module.train.data_postprocess import DataPostprocessor
-# from sklearn.preprocessing import MinMaxScaler, StandardScaler
-from module.train.model import GroupMultiAttenResNet
+from module.train.group_embedding import  GroupFeatureEmbedding
+from module.train.postprocessor import DataPostprocessor
+from module.train.ncpp import GroupMultiAttenResNet
 from module.train.train_utils.additional import merge_K_fold_results
 
 class Trainer:
@@ -73,10 +72,6 @@ class Trainer:
         #     self.label /= self.label_scale
 
     def train_model(self, save_path):
-        self.param_search = self.select_model == "XgboostModel" and self.configs["XgboostModel_config"]["param_search"]
-        if self.param_search:
-            param_search(self.processed_feature, self.processed_label)
-            sys.exit("finish xgboost param search")
         mkdir(save_path)
 
         self.model_module = self.model(self.configs, self.processed_feature, self.processed_label,
@@ -93,12 +88,6 @@ class Trainer:
         #     self.label *= self.label_scale
         self.data_postprocessor = DataPostprocessor(save_path,self.configs, self.filter_data, self.processed_label, self.train_inds, self.test_inds, self.predicted_results, self.processed_feature, hist_all=hist_all)
         self.data_postprocessor.run(self.train_with_all_data)
-
-    def upload_sql(self, variation_data="", test_results=""):
-        self.logger.info("<---Start upload validation data\n")
-        uploader = DatabaseManager(self.configs)
-        uploader.run(table_name="validate_data", data=test_results)
-        self.logger.info("-->Finish upload validation data\n")
 
 
     def train_with_Kfold(self):
@@ -123,8 +112,6 @@ class Trainer:
             self.postprecess_data(kth_fold_save_path)
             self.logger.info(f"Finish K Fold train and validation Split {i}\n")
         variation_data, test_results = merge_K_fold_results(self.configs)
-        if self.configs["validation_data_upload_to_sql"]:
-            self.upload_sql(variation_data, test_results)
         return hist_all
 
 
@@ -138,7 +125,7 @@ class Trainer:
         else:
             self.logger.info("-----------------Begin train with all the data without validation ------------------")
             self.logger.info("")
-            self.train_model(self.output_path)
+            hist_all = self.train_model(self.output_path)
         self.postprecess_data(hist_all=hist_all)
 
 
@@ -149,11 +136,6 @@ class Trainer:
 if __name__ == "__main__":
     trainer = Trainer()
     configs = trainer.run()
-
-
-
-    # print
-    # configs = read_config()   # read config file print
 
 
 

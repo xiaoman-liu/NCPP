@@ -78,12 +78,12 @@ class NBatchLogger(Callback):
 #         super(AttentionWeightCollector, self).__init__()
 #         self.attention_weights = []
 #         self.layer_name = name
-#         self.get_attention_weights_function = K.function(inputs=[self.model.input],
-#                                                          outputs=[self.model.get_layer(self.layer_name).output])
+#         self.get_attention_weights_function = K.function(inputs=[self.ncpp.input],
+#                                                          outputs=[self.ncpp.get_layer(self.layer_name).output])
 #
 #
 #     def on_batch_end(self, batch, logs=None):
-#         attention_layer = self.model.get_layer(self.layer_name)
+#         attention_layer = self.ncpp.get_layer(self.layer_name)
 #         # _, attention_weights_tensor = attention_layer.output
 #         # if tf.executing_eagerly():
 #         #     attention_weights_tensor = tf.convert_to_tensor(attention_weights_tensor)

@@ -1,0 +1,1 @@
+from module.train.ncpp.group_multi_atten_resnet.group_attention_resnet7 import GroupMultiAttenResNet

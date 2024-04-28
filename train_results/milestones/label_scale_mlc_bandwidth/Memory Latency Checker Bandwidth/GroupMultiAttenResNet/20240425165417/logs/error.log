@@ -1,0 +1,1 @@
+2024-04-25 16:54:27 - DataLoader - ERROR - drop columns: ['BIOS.kubernetes.pod_id', 'BIOS.type', 'BIOS.L1 Next Page Prefetcher', 'BIOS.AMP Prefetch', 'BIOS.Memory Encryption (TME)', 'BIOS.Total Memory Encryption Multi-Tenant(TME-MT)', 'BIOS.SW Guard Extensions (SGX)', 'BIOS.SGX PRM Size', 'BIOS.Volatile Memory Mode', 'BIOS.SNC', 'BIOS.Fan PWM Offset']

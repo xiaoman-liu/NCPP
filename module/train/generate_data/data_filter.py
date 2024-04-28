@@ -355,7 +355,7 @@ class DataLoader():
         # merge_data = merge_data.drop(columns=['QDF/SSPEC'])
         duplicate_columns = self.detect_duplicate_columns(merge_data)
         delete_columns = [item[1] for item in duplicate_columns]
-        self.logger.warning(f"Duplicated columns: {duplicate_columns}")
+        # self.logger.warning(f"Duplicated columns: {duplicate_columns}")
         # merge_data = merge_data.drop(columns=delete_columns)
         self.logger.info(
             f"After merge QDF, it has \033[1;34;34m{merge_data.shape[0]}\033[0m rows and \033[1;34;34m{merge_data.shape[1]}\033[0m columns.")

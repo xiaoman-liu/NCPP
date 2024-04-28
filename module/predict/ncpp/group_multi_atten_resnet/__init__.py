@@ -1,0 +1,1 @@
+from module.predict.ncpp.group_multi_atten_resnet.group_attention_resnet import GroupMultiAttenResNet

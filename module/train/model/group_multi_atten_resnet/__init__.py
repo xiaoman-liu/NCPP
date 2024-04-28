@@ -1,1 +1,0 @@
-from module.train.model.group_multi_atten_resnet.group_attention_resnet7 import GroupMultiAttenResNet

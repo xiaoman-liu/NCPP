@@ -21,12 +21,12 @@ spr_qdf_data_path: ../../data/processed//SPR_QDF_INFO.xlsx
 data_value_filter:
     "RESULT.WorkloadPreset":
         - default(SSE) | Idle latency | SPR XCC
-    Measure.DIMM.Population:
-        - Abnormal/1 Capacity
-        - Abnormal/2+ Capacity
-        - 2DPC/2 Capacity
-    SVR.CPU.CPU Model:
-        - Genuine Intel(R) CPU 0000%@
+#    Measure.DIMM.Population:
+#        - Abnormal/1 Capacity
+#        - Abnormal/2+ Capacity
+#        - 2DPC/2 Capacity
+#    SVR.CPU.CPU Model:
+#        - Genuine Intel(R) CPU 0000%@
 
 
 ## Data processor configuration

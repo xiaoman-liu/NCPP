@@ -113,7 +113,7 @@ def read_config(root_dir, output_path, config_path, module_path):
     if len(model_config) == 0:
         logger.error(f"Error reading file {model_path}")
         sys.exit(1)
-    logger.info(f"Read the model config from {model_path}")
+    logger.info(f"Read the ncpp config from {model_path}")
 
     rank_info = read_yaml_files(rank_info_path)
 
@@ -127,7 +127,7 @@ def read_config(root_dir, output_path, config_path, module_path):
     configs.update({"parent_output_path": parent_output_path})
     configs.update({"model_history_path": model_history_path})
     configs.update({"output_path": generate_abs_path(root_dir, generate_output_path(configs))})
-    configs.update({"config_save_path": os.path.join(configs["output_path"], "model", "config").replace("\\", "/")})
+    configs.update({"config_save_path": os.path.join(configs["output_path"], "ncpp", "config").replace("\\", "/")})
     root_dir = str(root_dir).replace("\\", "/")
     configs.update({"root_dir": root_dir})
     configs.update({"pre_trained_model_path": pre_trained_model_path})

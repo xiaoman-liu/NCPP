@@ -1,5 +1,5 @@
 model_dict:
-    GroupMultiAttenResNet: model.group_multi_atten_resnet.group_attention_resnet.GroupMultiAttenResNet
+    GroupMultiAttenResNet: ncpp.group_multi_atten_resnet.group_attention_resnet.GroupMultiAttenResNet
     
 
 replace_dict:

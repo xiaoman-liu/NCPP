@@ -12,6 +12,8 @@ setup(
     description='Nova CPU performance predictor',
     author='Xiaoman.liu',
     author_email='xiaoman.liu@intel.com',
+    url='https://github.com/xiaoman-liu/performance-prediction',
+    license='MIT',
     entry_points={
     'console_scripts': ['performance-prediction=module:function'],
     },
