@@ -84,13 +84,19 @@ class GroupFeatureEmbedding():
         """
         feature = feature.astype(float)
         col = feature.columns.to_list()[0]
-        scaler = joblib.load(os.path.join(self.encoder_path, f"{col}#minmax.pkl").replace("\\", "/"))
+        save_col = self.short_col(col)
+        scaler = joblib.load(os.path.join(self.encoder_path, f"{save_col}#minmax.pkl").replace("\\", "/"))
         print(f"{col} use minmax, min is {scaler.min_value}, max is {scaler.max_value}")
         scaled_features = scaler.normalize(feature)
 
         # feature = scaled_features.loc[:, np.isfinite(scaled_features).all()]
         # self.logger.info("Finished data normalization using Min_max_scaler method.")
         return scaled_features
+
+    def short_col(self, col):
+        if len(col) > 15:
+            col = col[:15]
+        return col
 
     def scale_normalize(self, feature):
         """
@@ -100,7 +106,8 @@ class GroupFeatureEmbedding():
         try:
             feature = feature.astype(float)
             col = feature.columns.to_list()[0]
-            file = glob.glob(self.encoder_path + f'/{col}nor*.pkl')[0]
+            save_col = self.short_col(col)
+            file = glob.glob(self.encoder_path + f'/{save_col}nor*.pkl')[0]
             scaler = joblib.load(file)
             print(f"{col} use normalization, mean is {scaler.mean_value}, std is {scaler.std_value}")
             result = scaler.normalize(feature)
@@ -189,6 +196,7 @@ class GroupFeatureEmbedding():
 
     def Tokenizer(self, feature):
         col = feature.columns.to_list()[0]
+        save_col = self.short_col(col)
         feature = feature.astype(str)
         tokenizer = TextTokenizer(feature)
         print(f"tokenizer for {col} is {tokenizer}")

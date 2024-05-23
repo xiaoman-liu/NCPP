@@ -73,6 +73,10 @@ class GroupFeatureEmbedding():
         reducted_feature = feature.drop(columns=intersect_colums)
         # reducted_feature = feature
         return reducted_feature
+    def short_col(self, col):
+        if len(col) > 15:
+            col = col[:15]
+        return col
     def scale_min_max(self, feature):
         """
         Scale the continuous features to the range of [-1, 1].
@@ -81,7 +85,9 @@ class GroupFeatureEmbedding():
         scaler = MinMaxScaler(feature)
         scaled_features = scaler.normalize(feature)
         col = feature.columns.to_list()[0]
-        joblib.dump(scaler, os.path.join(self.feature_encoder_save_path,f"{col}#minmax.pkl").replace("\\", "/"))
+        save_col = self.short_col(col)
+
+        joblib.dump(scaler, os.path.join(self.feature_encoder_save_path,f"{save_col}#minmax.pkl").replace("\\", "/"))
         # feature = scaled_features.loc[:, np.isfinite(scaled_features).all()]
         self.logger.info("Finished data normalization using Min_max_scaler method.")
         self.save_feature_rules_to_yaml(scaled_features, "Min_max_scaler")
@@ -165,8 +171,9 @@ class GroupFeatureEmbedding():
         scaler = NorScaler(feature)
         result = scaler.normalize(feature)
         col = str(feature.columns.to_list()[0]) + 'nor.pkl'
+        save_col = self.short_col(col)
         try:
-            path = os.path.join(self.feature_encoder_save_path, col).replace("\\", "/")
+            path = os.path.join(self.feature_encoder_save_path, save_col).replace("\\", "/")
             joblib.dump(scaler, path)
         except Exception as e:
             self.logger.error(f"Error {e}")
@@ -187,11 +194,12 @@ class GroupFeatureEmbedding():
 
     def Tokenizer(self, feature):
         col = feature.columns.to_list()[0]
+        save_col = self.short_col(col)
         feature = feature.astype(str)
         tokenizer = TextTokenizer(feature)
         processed_feature = tokenizer.fit_transform(feature)
 
-        joblib.dump(tokenizer, os.path.join(self.feature_encoder_save_path,f"{col}#tokenizer.pkl").replace("\\", "/"))
+        joblib.dump(tokenizer, os.path.join(self.feature_encoder_save_path,f"{save_col}#tokenizer.pkl").replace("\\", "/"))
         self.save_feature_rules_to_yaml(processed_feature, "Tokenizer", feature_columns=col)
         # self.logger.info("Finished data Tokenizer.")
         return processed_feature

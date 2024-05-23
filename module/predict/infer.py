@@ -10,13 +10,13 @@ import joblib
 
 from module.predict.utils import calculate_running_time, mkdir, save_data_encoder, read_config, set_logger
 from module.predict.generate_data import DataLoader
-from module.predict.data_preprocess import FeatureEncoder, GroupFeatureEmbedding
-from module.predict.data_postprocess import DataPostprocessor
+from module.predict.group_embedding import FeatureEncoder, GroupFeatureEmbedding
+from module.predict.postprocess import DataPostprocessor
 from sklearn.preprocessing import MinMaxScaler, StandardScaler
 # from module.predict.utils.model_utils import MinMaxScaler, NorScaler, OneHotEncoder, TextTokenizer
 from module.predict.utils.additional import merge_K_fold_results
-from module.predict.utils import param_search, DatabaseManager
-from module.predict.model import LinearModel, XgboostModel, FCN, FCN_Vec, ResNet, AttenResNet, MultiAttenResNet, RandomForest, SVMModel, LSTMModel, Ridge, GroupMultiAttenResNet
+from module.predict.utils import param_search
+from module.predict.ncpp import GroupMultiAttenResNet
 
 
 
@@ -87,9 +87,6 @@ class Predictor:
         self.data_postprocessor = DataPostprocessor(save_path, self.configs, self.filter_data, self.processsed_label, self.predicted_results)
         self.all_validate_dataset = self.data_postprocessor.run()
 
-    def upload_sql(self, variation_data="", test_results=""):
-        uploader = DatabaseManager(self.configs)
-        uploader.run("inference_result", self.all_validate_dataset)
 
 
     @calculate_running_time
@@ -100,8 +97,6 @@ class Predictor:
         self.logger.info("Begin to infer")
         self.only_predict(self.output_path)
         self.postprecess_data()
-        if self.infer_upload_sql:
-            self.upload_sql()
 
 
         return self.configs

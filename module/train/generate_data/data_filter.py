@@ -281,21 +281,12 @@ class DataLoader():
         else:
                 # Initialize the GroupKFold class with the number of folds you want
             group_kfold = GroupKFold(n_splits=self.configs["n_split"])
-            # Split the data into train and test sets using the split method
-            # all_train_indices = np.array([])
-            # all_test_indices = np.array([])
-            # for train_index, val_index in group_kfold.split(filter_data, all_label, groups):
-            #     all_train_indices = np.concatenate([all_train_indices, train_index])
-            #     all_test_indices = np.concatenate([all_test_indices, val_index])
             all_train_indices = []
             all_test_indices = []
             assert filter_data is not None
             for train_index, val_index in group_kfold.split(filter_data, all_label, groups):
                 all_train_indices.append(train_index)
                 all_test_indices.append(val_index)
-
-            # groups = filter_data[["kubernetes.pod_id"]].apply(lambda x: '_'.join(x.astype(str)), axis=1)
-            #
         return all_train_indices, all_test_indices
 
     def train_infer_data_split(self, train_inds, test_inds, merge_data):
@@ -332,6 +323,7 @@ class DataLoader():
 
         merge_data_before = pd.merge(filter_data, qdf_information, left_on='META.metadata.cscope.qdf0',
                               right_on=self.prefix + 'QDF/SSPEC')
+        merge_data_before = merge_data_before.drop_duplicates()
         self.logger.warning(f"merge_data has {merge_data_before.shape[0]} rows and {merge_data_before.shape[1]} columns.")
         merge_data = merge_data_before.dropna(axis=1)
         drop_columns = [item for item in merge_data_before.columns if item not in merge_data.columns]

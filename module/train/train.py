@@ -1,12 +1,9 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# @Time    : 11/22/2022 4:49 PM
-# @Author  : xiaomanl
-# @File    : test.py
-# @Software: PyCharm
+#Copyright (C) <2024> Intel Corporation
+#SPDX-License-Identifier: Apache-2.0
 
 import os
 import sys
+sys.path.append(os.path.abspath(__file__))
 
 import pandas as pd
 from pathlib import Path

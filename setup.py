@@ -1,9 +1,5 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# @Time    : 2/12/2023 5:03 PM
-# @Author  : xiaomanl
-# @File    : setup.py
-# @Software: PyCharm
+#Copyright (C) <2024> Intel Corporation
+#SPDX-License-Identifier: Apache-2.0
 from setuptools import setup, find_packages
 
 setup(

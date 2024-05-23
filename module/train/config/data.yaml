@@ -78,8 +78,4 @@ Memory Latency Checker Bandwidth:
   - Peak Bandwidth Socket 1 100R (MB/s)
 
 
-Linpack:
-    - N_SIZE
-    - Score(GFLOPS)
-
 

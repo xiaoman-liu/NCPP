@@ -1,5 +1,6 @@
-#Copyright (C) <2024> Intel Corporation
-#SPDX-License-Identifier: Apache-2.0
+Copyright (C) <2024> Intel Corporation
+
+SPDX-License-Identifier: Apache-2.0
 
 NCPP - Nova CPU performance predictor
 ==============================
@@ -23,6 +24,7 @@ cd [Project Directory]
 pip install -r requirements.txt
 python setup.py install
 ```
+
 ## File Structure
 
 
