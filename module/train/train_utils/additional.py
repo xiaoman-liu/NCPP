@@ -1,3 +1,7 @@
+#Copyright (C) <2024> Intel Corporation
+#SPDX-License-Identifier: Apache-2.0
+
+
 import sys
 
 import pandas as pd

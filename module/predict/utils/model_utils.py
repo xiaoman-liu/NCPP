@@ -1,9 +1,5 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# @Time    : 9/22/2023 3:31 PM
-# @Author  : xiaomanl
-# @File    : model_utils.py
-# @Software: PyCharm
+#Copyright (C) <2024> Intel Corporation
+#SPDX-License-Identifier: Apache-2.0
 from tensorflow.keras.callbacks import ModelCheckpoint, ReduceLROnPlateau, Callback
 from tensorflow.keras.utils import custom_object_scope, Sequence
 from tensorflow.keras.layers import Layer

@@ -1,9 +1,5 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# @Time    : 7/3/2023 6:01 PM
-# @Author  : xiaomanl
-# @File    : logger.py
-# @Software: PyCharm
+#Copyright (C) <2024> Intel Corporation
+#SPDX-License-Identifier: Apache-2.0
 import logging
 import yaml
 import logging.config

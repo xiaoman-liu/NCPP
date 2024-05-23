@@ -1,9 +1,5 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# @Time    : 11/22/2022 5:19 PM
-# @Author  : xiaomanl
-# @File    : data_filter.py
-# @Software: PyCharm
+#Copyright (C) <2024> Intel Corporation
+#SPDX-License-Identifier: Apache-2.0
 import os.path
 
 import pandas as pd

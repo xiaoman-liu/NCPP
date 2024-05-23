@@ -1,9 +1,5 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# @Time    : 10/25/2023 2:42 PM
-# @Author  : xiaomanl
-# @File    : __init__.py
-# @Software: PyCharm
+#Copyright (C) <2024> Intel Corporation
+#SPDX-License-Identifier: Apache-2.0
 
 from module.predict.utils.utils import Train_predict_compare, calculate_running_time, mkdir,save_data_encoder, read_config, read_file, dict_to_csv, generate_evaluate_metric,generate_abs_path, read_yaml_file, read_class_config, log_assert
 from module.predict.utils.logger import set_logger

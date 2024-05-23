@@ -1,9 +1,5 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# @Time    : 2/13/2023 10:28 PM
-# @Author  : xiaomanl
-# @File    : postprocessor.py
-# @Software: PyCharm
+#Copyright (C) <2024> Intel Corporation
+#SPDX-License-Identifier: Apache-2.0
 
 import pandas as pd
 import logging

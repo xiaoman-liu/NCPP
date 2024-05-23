@@ -1,3 +1,5 @@
+#Copyright (C) <2024> Intel Corporation
+#SPDX-License-Identifier: Apache-2.0
 rank_to_number_dict:
     "Single Rank": 1
     "Dual Rank": 2

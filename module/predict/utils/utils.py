@@ -1,9 +1,5 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# @Time    : 11/23/2022 9:28 AM
-# @Author  : xiaomanl
-# @File    : train_utils
-# @Software: PyCharm
+#Copyright (C) <2024> Intel Corporation
+#SPDX-License-Identifier: Apache-2.0
 
 import yaml
 import os

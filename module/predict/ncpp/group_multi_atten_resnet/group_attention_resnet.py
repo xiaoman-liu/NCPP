@@ -1,9 +1,5 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# @Time    : 9/22/2023 11:07 AM
-# @Author  : xiaomanl
-# @File    : fcn_vec.py
-# @Software: PyCharm
+#Copyright (C) <2024> Intel Corporation
+#SPDX-License-Identifier: Apache-2.0
 
 import keras
 from keras.models import Model
@@ -17,6 +13,8 @@ from keras.backend import reshape
 from keras.layers import Embedding
 import matplotlib.pyplot as plt
 import numpy as np
+
+
 from keras.utils import custom_object_scope
 from module.predict.ncpp.base_class import BaseModel
 from module.predict.utils import  calculate_running_time, LogPrintCallback, CustomDataGenerator, Train_predict_compare, Self_Attention, MultiHeadAtten

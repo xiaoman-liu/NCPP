@@ -1,9 +1,5 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# @Time    : 9/22/2023 9:48 AM
-# @Author  : xiaomanl
-# @File    : string2vec.py
-# @Software: PyCharm
+#Copyright (C) <2024> Intel Corporation
+#SPDX-License-Identifier: Apache-2.0
 import sys
 from collections import OrderedDict
 import yaml
