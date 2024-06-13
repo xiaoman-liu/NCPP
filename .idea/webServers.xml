@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="9d0b3385-9038-49f0-9cf6-ca12066d64a5" name="gnr1002" url="http://10.45.164.6">
+        <fileTransfer rootFolder="/mnt/xiaomanl/NCPP" accessType="SFTP" host="10.45.164.6" port="22" sshConfigId="506a0a0c-65f2-4579-993a-f4b767f2c50c" sshConfig="root@10.45.164.6:22 password">
+          <advancedOptions>
+            <advancedOptions controlEncoding="utf-8" dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
