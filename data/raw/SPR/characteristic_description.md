@@ -35,7 +35,7 @@
 | DIMM.PartNo      | String        | The part number of the DIMMs, potentially indicating the manufacturer or other specifications |
 | RANK             | Numeric       | The rank of the DIMM which can affect memory access and performance                      |
 
-# Processor Features
+# Processor-related Hardware Characteristics
 
 | **Feature**                   | **Data Type** | **Description**                                                                                                                                                                                                                                                                                                                                                                         |
 |-------------------------------|---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
