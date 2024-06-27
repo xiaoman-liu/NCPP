@@ -12,7 +12,7 @@ The purpose of this file structure is to allow data science exploration to easil
 ------------
 
 ## Introduction
-NCPP is a machine learning model designed for CPU Bbenchmark performance prediction. It includes modules for data processing, model training, and prediction, specific developed for Intel X86 products.
+NCPP is a machine learning model designed for CPU benchmark performance prediction. It includes modules for data processing, model training, and prediction, specific developed for Intel X86 products.
 
 ## Installation Guide
 
@@ -76,7 +76,7 @@ python module/predict/infer.py
 List all the dependencies required by your project in the requirements.txt file. Ensure they are all installed using the pip command provided in the installation guide.
 
 ## License
-This project is licensed under the MIT License. See the LICENSE file for more details.
+This project is licensed under the Apache-2.0. See the LICENSE file for more details.  If you use this code or build upon the ideas presented in this model, please cite our paper [paper link] and/or this GitHub repository [https://github.com/xiaoman-liu/NCPP/tree/main]
 ## Report Paper
 
 ## Contributing
