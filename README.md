@@ -76,11 +76,14 @@ python module/predict/infer.py
 List all the dependencies required by your project in the requirements.txt file. Ensure they are all installed using the pip command provided in the installation guide.
 
 ## License
-This project is licensed under the Apache-2.0. See the LICENSE file for more details.  If you use this code or build upon the ideas presented in this model, please cite our paper [paper link] and/or this GitHub repository [https://github.com/xiaoman-liu/NCPP/tree/main]
+This project is licensed under the Apache-2.0. See the LICENSE file for more details.  
 ## Report Paper
 
-## Contributing
-If you wish to contribute to this project, please refer to the CONTRIBUTING.md file for guidelines.
+## Citation
+If you use this code or build upon the ideas presented in this model, please cite our paper [paper link] and/or this GitHub repository [https://github.com/xiaoman-liu/NCPP/tree/main]
+```bash
+
+```
 
 ## Contact
 
